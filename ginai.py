@@ -11,7 +11,6 @@ from cast_audio import tts_say
 
 ingredients_available = ['coke', 'vodka', 'tonic', 'orange juice']
 
-
 def speak_making(cocktail, pump_time):
     pump_time = round(pump_time)
     msg = f'Making a {cocktail.cocktail_name}. {cocktail.description}. Ready in {pump_time} seconds.'
@@ -44,7 +43,7 @@ def map_ingredients(response_dict):
 
     print(pump_instructions_ml)
 
-    pump_time = do_drink(pump_instructions_ml)
+    pump_time = do_drink(pump_instructions_ml, ingredients_available)
     speak_making(cocktail, pump_time)
     rgb_util.thread_run(rgb_util.effect_theater_chase_rainbow, pump_time)
     speak_done(cocktail)
