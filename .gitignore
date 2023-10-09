@@ -1,0 +1,7 @@
+.venv/*
+config_secrets.py
+tmp/*
+recipes/*.json
+__pycache__/*
+OLD/*
+
