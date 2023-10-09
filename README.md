@@ -14,9 +14,9 @@ pip install -r requirements.txt
  ```
  
  # Links
- - https://www.markhneedham.com/blog/2023/07/27/return-consistent-predictable-valid-json-openai-gpt/
  - https://medium.com/dev-bits/a-clear-guide-to-openai-function-calling-with-python-dcbc200c5d70
- 
+ - https://www.markhneedham.com/blog/2023/07/27/return-consistent-predictable-valid-json-openai-gpt/
+
  ### NotOpenSSLWarning: urllib3
 
 To resolve `NotOpenSSLWarning: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the 'ssl' module` try this
@@ -31,6 +31,11 @@ AttributeError: 'GoogleAssistant' object has no attribute 'cc'
 
 ```bash
 pip install PyChromecast==1.0.3
+```
+
+### Downgrade the protobuf package to 3.20.x or lower. 
+```bash
+pip install protobuf==3.20.1
 ```
 
 ## RGB

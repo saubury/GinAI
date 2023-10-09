@@ -9,7 +9,7 @@ from openai_util import make_drink
 from cast_audio import tts_say
 
 
-ingrediants_available = ['coke', 'vodka', 'tonic', 'orange juice']
+ingredients_available = ['coke', 'vodka', 'tonic', 'orange juice']
 
 
 def speak_making(cocktail, pump_time):
@@ -31,16 +31,16 @@ def map_ingredients(response_dict):
     pump_instructions_ml = [0,0,0,0]
 
     for drink_dict in my_ingredients_list:
-        this_ingrediant = drink_dict.ingredient_name
+        this_ingredient = drink_dict.ingredient_name
         this_quantity = drink_dict.quantity_ml
 
         try:
-            ingrediants_available_idx = ingrediants_available.index(this_ingrediant)
-            print(f'Ingredients {this_ingrediant} at index {ingrediants_available_idx} pour {this_quantity}')
-            pump_instructions_ml[ingrediants_available_idx] = this_quantity
+            ingredients_available_idx = ingredients_available.index(this_ingredient)
+            print(f'Ingredients {this_ingredient} at index {ingredients_available_idx} pour {this_quantity}')
+            pump_instructions_ml[ingredients_available_idx] = this_quantity
 
         except ValueError as ve:
-            print(f'Unable to find ingrediant {this_ingrediant}')
+            print(f'Unable to find ingrediant {this_ingredient}')
 
     print(pump_instructions_ml)
 
@@ -51,7 +51,7 @@ def map_ingredients(response_dict):
     rgb_util.thread_run(rgb_util.effect_green_wipe, 8)
 
 def doAI(file):
-    response_dict = make_drink(ingrediants_available, 'an adult who wants a traditional drink', 80)
+    response_dict = make_drink(ingredients_available, 'an adult who wants a traditional drink', 80)
     print(json.dumps(response_dict, indent=4))
     map_ingredients(response_dict)
 

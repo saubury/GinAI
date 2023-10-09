@@ -99,5 +99,4 @@ def thread_run(function_name, run_for):
 # Main program logic follows:
 if __name__ == '__main__':
     thread_run(effect_theater_chase_rainbow, 60)
-    # thread_run(effect_rainbow, 60)
-    # thread_run(effect_green_wipe, 8)
+
