@@ -19,7 +19,6 @@ def play_song(searchString):
     trackSelectionList = []
 
     for trackItem in trackResults:
-        # print("🔊 {} : Track 🎵 : {}  URI:{}".format(colored('Playing', 'red'), colored(trackItem['name'], 'green'), trackItem['uri']))
         print(f"🔊 Playing 🎵 : {trackItem['name']} ")
         trackSelectionList.append(trackItem['uri'])
 
@@ -42,7 +41,7 @@ def get_token(username):
 def findAndPlaySong(songRequest):
     splitRequest = songRequest.split(' by ')
     if (len(splitRequest)==1):
-        # Title only serach
+        # Title only search
         searchString = 'track:{}'.format(splitRequest[0])
     else:
         # Title and Artist search

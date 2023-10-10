@@ -4,12 +4,12 @@ import datetime
 import rgb_util
 import time
 from ginai_types import Cocktail
-from pump_util import do_drink
+from pump_util import run_pumps_from_instructions
 from openai_util import make_drink
 from cast_audio import tts_say
 
 
-ingredients_available = ['coke', 'vodka', 'tonic', 'orange juice']
+ingredients_available = ['gin', 'vodka', 'tonic', 'white rum']
 
 def speak_making(cocktail, pump_time):
     pump_time = round(pump_time)
@@ -43,7 +43,7 @@ def map_ingredients(response_dict):
 
     print(pump_instructions_ml)
 
-    pump_time = do_drink(pump_instructions_ml, ingredients_available)
+    pump_time = run_pumps_from_instructions(pump_instructions_ml, ingredients_available)
     speak_making(cocktail, pump_time)
     rgb_util.thread_run(rgb_util.effect_theater_chase_rainbow, pump_time)
     speak_done(cocktail)

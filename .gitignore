@@ -4,4 +4,5 @@ tmp/*
 recipes/*.json
 __pycache__/*
 OLD/*
+.cache-*
 
