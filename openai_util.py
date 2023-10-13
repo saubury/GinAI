@@ -10,10 +10,11 @@ def make_drink(user_input, client, total_ml):
 
     prompt = f'''
     {user_input}
-    With the ingredients provided above, generate a recipe for a cocktail and return a JSON array as the result.
+    With only the ingredients provided above, generate a recipe for a cocktail and return a JSON array as the result.
     You are serving the drink to {client}.
     It is a hot day.
     Only give quantities in metric units.
+    Only give quantities in whole numbers.
     Do not change the case of the ingredient_name.
     You do not need to use all of the ingredients listed.
     You may only use a maximum of 4 ingredients.
