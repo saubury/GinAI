@@ -4,6 +4,14 @@
 
 ![](./docs/ginai.png)
 
+# Blog
+A full writeup blog is here [🍹GinAI - Cocktails mixed with generative AI](https://simon-aubury.medium.com/ginai-cocktails-mixed-with-generative-ai-21cf20f13727)
+
+# Video
+A quick video 
+
+[![video](https://img.youtube.com/vi/EWsBKTsAg1w/default.jpg)](https://youtu.be/EWsBKTsAg1w)
+
 ## Setup virtual python environment
 Create a [virtual python](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/) environment to keep dependencies separate. The _venv_ module is the preferred way to create and manage virtual environments.
 
